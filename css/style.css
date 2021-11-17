@@ -1,0 +1,716 @@
+/*===== FONTS =====*/
+@font-face {
+  font-family: 'S-CoreDream-2ExtraLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+  --font64: 4rem;
+  --font48 :3rem;
+  --font26: 1.625rem;
+  --font18: 1.125rem;
+  --font16: 1rem;
+  --font15:0.937rem;
+  --font14: 0.875rem;
+  --font12: 0.75rem;
+  --topmarginVer1: 8em;
+}
+@media screen and (max-width: 768px){
+  :root{
+    --font64: 3.75rem;
+    --font48 :2.75rem;
+    --font26: 1.5rem;
+    --font18: 1rem;
+    --font16: 0.85rem;
+    --font15:  0.687rem;
+    --font14: 0.625rem;
+    --font12: 0.5rem;
+    --topmarginVer1: 4em;
+  }
+  .font11 {
+    font-size:0.8rem;
+    padding:12px !important;
+  }
+}
+.font64{
+  font-size:var(--font64) !important;
+}
+.font26 {
+  font-size:var(--font26) !important;
+}
+.font18 {
+  font-size:var(--font18) !important;
+}
+.font16 {
+  font-size:var(--font16) !important;
+}
+.font15 {
+  font-size:var(--font15) !important;
+}
+.font14 {
+  font-size:var(--font14) !important;
+}
+.font12 {
+  font-size:var(--font12) !important;
+}
+.font48{
+  font-size:var(--font48) !important;
+}
+
+/*===== z index =====*/
+:root{
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+/*===== Margenes =====*/
+:root{
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+}
+/*====nav====*/
+#navbar-example {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+.myWrapper {
+  height: 100%;
+  overflow-x: hidden;
+}
+.nav{
+  font-size:var(--font18);
+}
+.nav-link {
+  font-weight: bold;
+  background-color: white;
+  border-radius:0px;
+  
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #0d6dfd00;
+  border-bottom: 4px solid white;
+  border-radius: 0px;
+}
+.normal {
+  color: rgb(27, 27, 27);
+  background-color: #0d6dfd00;
+  border-bottom: 4px solid rgb(34, 34, 34);
+  border-radius: 0px;
+}
+
+/*==dynamic nav==*/
+@media screen and (max-width: 991px){
+  .navbar {
+    transition: top 0.3s;
+  }
+  main {
+    height: 100vh
+  }
+  
+  .showBtn {
+    opacity: 1;
+    transform: translateY(0)
+  }
+
+}
+/*===== BASE =====*/
+.paddingY {
+  padding-top:64px !important;
+  padding-bottom:64px !important;
+}
+@media screen and (max-width: 768px){
+  .paddingY {
+    padding-top:32px !important;
+    padding-bottom:32px !important;
+    
+  }
+  
+}
+.mainGradient {
+    background: linear-gradient( to right, #88FAA3, #0BCDF7 );
+}
+.defaultMargin {
+  margin:0px 180px;
+}
+.fixed-top {
+    z-index:var(--z-fixed);
+}
+.fullHeight {
+    height: 100vh;
+}
+
+body {
+    position: relative;
+    font-family:S-CoreDream-2ExtraLight;
+    scroll-behavior: smooth;
+}
+
+#scrollspyHeading4 {
+    background-color: #F8F9FA;
+}
+.fitcontent {
+    height:fit-content
+}
+.keepText{
+  word-break: keep-all;
+}
+
+/*===== FALCONS MOTTO=====*/
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 4rem 0;
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: -.05rem;
+}
+
+.featurette-image {
+  height: 100%;
+  width: 100%;
+}
+/* RESPONSIVE CSS for motto
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+ 
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 3rem;
+  }
+}
+
+/*==Profile==*/
+.profileCard {
+    width:368.5px;
+    height:430px;
+}
+
+.profileBox {
+    top:60px; 
+    left:67.95px;
+    width:183.6px; 
+    height:183.6px;
+    border-radius: 50%; 
+    border: 9px solid white; 
+    position:absolute;
+}
+
+.profileBox img{
+    object-fit: cover; border-radius: 50%; width:100%; height:100%;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #000000a4;
+    overflow: hidden;
+    width: 321.5px;
+    height:0;
+    transition: .5s ease;
+    z-index:var(--z-tooltip); 
+}
+
+.profileCard:hover > .overlay {
+    bottom: 0;
+    height: 100%; 
+}
+
+.text {
+    color: rgb(253, 253, 253);
+    font-size: var(--font18);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding:0px;
+    margin:0px;
+    width: 80%;
+}
+
+@media screen and (max-width: 768px){
+  .profileForMobile {
+    background-color:#2b2b2b;
+  }
+}
+
+/*===== About =====*/
+.eyesonBackground {
+  background-color: #F3F3F3;
+}
+.about {
+  z-index: var(--z-fixed);
+}
+.about span.title, .highlight {
+    border-bottom : 2px solid #09ECD6;
+}
+.about span.subtitle {
+    border-bottom : 0px solid #000000;
+}
+
+/*===== about-firstsection =====*/
+.eyesOnChair {
+    width:21rem; height:21rem;
+    border-radius:50%;
+    border:var(--font16) solid transparent;
+    background-image: linear-gradient(#F3F3F3, #F3F3F3), linear-gradient(to right, #88FAA3, #0BCDF7 );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-image-slice:1;
+    margin: 0 auto;
+}
+
+.eyesOnChair div{
+    width:17rem; height:17rem;
+    padding:20px;
+    border-radius: 50%;
+    top:16px;
+    margin:0 auto;
+    position:relative;
+}
+
+.eyesOnChair img {
+    width:10rem; height:10rem;
+    margin-top:2.5rem;
+    object-fit: contain;
+}
+
+.eyesOnicon {
+    width:12.375rem; height:12.375rem;
+    border-radius: 50%;
+    border:2px solid transparent;
+    background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(to right, #88FAA3, #0BCDF7 );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    margin:54px auto 0px;
+    position:relative;
+}
+.hugeVer {
+  width: var(--font12);
+  height:var(--font14);
+  border:none !important;
+  position:absolute;
+}
+.hugeVer .mainGradient{
+  width: 10em;
+  height:10em;
+  top:1.6em;
+  position:absolute;
+  top:-14.5em;
+  left:1.5em;
+}
+.hugeVer img{
+  width:5.5em !important;
+  height:5.5em !important;
+  margin:1.4em !important;
+}
+.smallVer{
+  width: 9rem;
+  height:9rem;
+}
+.smallVer .mainGradient{
+  width: 6rem;
+  height:6rem;
+  top:1.4em;
+}
+.smallVer img{
+  width:3.2em !important;
+  height:3.2rem !important;
+  margin:0.5rem !important;
+}
+
+.eyesOnicon h4 {
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform: translate(-50%, 0);
+}
+.eyesOnicon div{
+    width:144px; height:144px;
+    padding:14px;
+    border-radius: 50%;
+    top:23px;
+    margin:0 auto;
+    position:relative;
+}
+.eyesOnicon img {
+    width:74px; height:74px;
+    object-fit: contain;
+    margin:22px;
+}
+.defaultPadding {
+    padding:var(--font18) calc(var(--font18) * 20rem);
+}
+.dottedline{
+    height: 157px; width:78px; border-bottom: 5px dotted rgb(180, 180, 180);
+}
+
+.valueIcon {
+    border:15px solid #3A3A3A;
+    background-color: #09ECD6;
+    width:174px; height:174px;
+    border-radius:50%;
+    text-align: center;
+    margin: auto;
+    position:relative;
+}
+.valueIcon span, .valueIconCenter div>span, .absoluteCenter{
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+}
+.profileBox.absoluteCenter{
+  top:40%;
+}
+.owereIntroImg{
+  padding:120px 0px; 
+  background-image: url('src/uiBackground.png'); background-size: cover;background-repeat:no-repeat;
+}
+.valueIconCenter{
+  border:1px solid #09ECD6;
+  width:360px; height:360px;
+  border-radius:50%;
+
+}
+.valueIconCenter div{
+  border:32px solid #09ECD6;
+  width: 298px;; height: 298px;
+  border-radius:50%;
+  z-index: 999;
+  margin:29px auto;
+  position:relative;
+  color:#09ECD6;
+}
+
+.sect01 {
+  position: relative;
+  width: var(--font64); 
+  height:  var(--font64);  
+  margin: var(--font18) auto; 
+}
+
+.sect01 .line-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.sect01 .line-box > span {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(88, 88, 88);
+}
+  
+.sect01 .line-01 {
+  transform: rotate(135deg) translateX(0%);
+}
+  
+.sect01 .line-02 {
+  transform: rotate(45deg) translateX(0%);
+}
+.overlayProcess {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height:0;
+  z-index:999; 
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+
+/*the animation definition*/
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.gradient-border {
+  --border-width: 3px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #F5F5F5;
+  border-radius: var(--border-width);
+}
+
+.gradient-border::after {
+  position: absolute;
+  content: "";
+  top: calc(-1 * var(--border-width));
+  right: calc(-1 * var(--border-width));
+  z-index: -1;
+  width: calc(100% + var(--border-width) * 2);
+  height: calc(100% + var(--border-width) * 2);
+  background: linear-gradient(60deg, #abf25f, #5ff281, #5ff2f0,  #abf25f, #5ff281, #5ff2f0);
+  background-size: 300% 300%;
+  background-position: 0 150%;
+  border-radius: calc(2 * var(--border-width));
+  animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+  50% {
+      background-position: 100% 50%;
+  }
+}
+
+.rotate-center {
+  border-radius:50%;
+  width:208px;
+  height:208px;
+  margin-top:3rem;
+  border:6px solid transparent;
+  background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #88FAA3, #0BCDF7 );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-image-slice:1;
+    -webkit-animation: rotate-center 2.5s linear infinite both;
+            animation: rotate-center 2.5s linear infinite both;
+}
+
+#value1:hover +  #ownerValue {
+  animation-name: fadeIn;
+}
+#ownerValue{
+  opacity: 0;
+  animation-name: fadeIn;
+}
+.ih-item:nth-of-type(2):hover + div {
+  animation-name: fadeIn;
+}
+.rotateIn {
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn
+}
+
+
+.relativeborderContant {
+  border:3px solid #D5D5D5;
+  position:relative;
+  margin-top:var(--topmarginVer1);
+  height:fit-content;
+}
+.relativeborderContant > .eyesOnicon {
+  position:absolute !important;
+  left:50%;
+  margin:0px !important;
+  transform: translate(-50%, -50%);
+}
+#svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#line{
+  stroke-width:2px;
+  stroke:rgb(0,0,0);
+}
+/*==video==*/
+.relativeborderContant video {
+  margin: var(--topmarginVer1) auto 2em auto;
+  width: 70%;
+  height: 70%;
+}
+@media screen and (max-width: 768px){
+  .relativeborderContant video {
+    width:90%;
+  }
+
+}
+.contactTitle2 {
+  background-color: #212529;
+  padding:0 10px;
+  position: absolute;
+  top:-2px; left:50%;
+  transform: translate(-50%, -50%);
+}
+.contactTitle3 {
+  background-color: #F8F9FA;
+  padding:0 10px;
+  position: absolute;
+  top:-2px; left:50%;
+  transform: translate(-50%, -50%);
+}
+.bordergray {
+  border : 2px solid #aaaaaa;
+}
+
+/*==collapse==*/
+.forMobile {
+  display:none;
+}
+
+/*==else mobile==*/
+@media screen and (max-width: 768px){
+  .swiper {
+    width: 100%;
+    height: fit-content; 
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: lavender !important;
+  }
+  .forWeb{
+    display: none;
+  }
+  .forMobile {
+    display:initial;
+  }
+  .eyesOnChair {
+    width:12rem; height:12rem;
+    border-radius:50%;
+    border:var(--font12) solid transparent;
+    background-image: linear-gradient(#F3F3F3, #F3F3F3), linear-gradient(to right, #88FAA3, #0BCDF7 );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-image-slice:1;
+  }
+  .eyesOnChair div{
+    width:8.5rem; height:8.5rem;
+    padding:var(--font16);
+    border-radius: 50%;
+    top:20px;
+    margin:0 auto;
+    position:relative;
+  }
+  .eyesOnChair img {
+    width:6rem; height:6rem;
+    margin-top:0.3rem;
+    object-fit: contain;
+  }
+  .dottedline{
+    height:6.6rem; width:2rem; border-bottom: 4px dotted rgb(180, 180, 180);
+  }
+  .eyesOnicon {
+    width:6rem; height:6rem;
+    border-radius: 50%;
+    border:2px solid transparent;
+    background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(to right, #88FAA3, #0BCDF7 );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    margin:54px auto 0px;
+    position:relative;
+  }
+  .eyesOnicon div{
+    width: 4.2rem;
+    height:4.2rem;
+    top:0.8rem;
+    padding:14px;
+    border-radius: 50%;
+    margin:0 auto;
+    position:relative;
+  }
+  .eyesOnicon img {
+      width:2rem; height:2rem;
+      object-fit: contain;
+      margin:0.2rem;
+  }
+
+  .hugeVer {
+    width:9em;
+    height:var(--font12);
+    border:none !important;
+    position:absolute;
+    
+  }
+  .hugeVer .mainGradient{
+    width: 5.8em;
+    height:5.8em;
+    top:1.2em;
+    position:absolute;
+    top:-9.9em;
+    left:1.1em;
+  }
+  .hugeVer img{
+    width:4em !important;
+    height:4em !important;
+    margin:0 !important;
+  }
+  .smallVer{
+    width: 6rem;
+    height:6rem;
+  }
+  .smallVer .mainGradient{
+    width: 4.2rem;
+    height:4.2rem;
+    top:0.8rem;
+  }
+  .smallVer img{
+    width:2em !important;
+    height:2rem !important;
+    margin:0.3rem !important;
+  }
+  .rotate-center {
+    width: 8rem;
+    height: 8rem;
+  }
+}    
